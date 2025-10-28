@@ -20,14 +20,15 @@
 # driver.get(url)
 # time.sleep(5)
 
-# divans = driver.find_elements(By.CSS_SELECTOR, "ProductCardMain_card__KQzzn")
+# divans = driver.find_elements(By.CSS_SELECTOR, ".ProductCardMain_card__KQzzn")
 
 # parsed_data = []
 # for divan in divans:
 #     try:
-#         name = divan.find_element(By.CSS_SELECTOR, "div.Name_name__Wqn5R ProductName ActiveProduct").text
-#         price = divan.find_element(By.CSS_SELECTOR, 'span.ui-LD-ZU FullPrice_actual__Mio07').text
-#         link = divan.find_element(By.CSS_SELECTOR, 'a.Link_link__vxTjn').get_attribute("href")
+#         # Название товара извлекаем из alt атрибута изображения
+#         name = divan.find_element(By.CSS_SELECTOR, 'img[itemProp="image"]').get_attribute("alt")
+#         price = divan.find_element(By.CSS_SELECTOR, 'span[data-testid="price"]').text
+#         link = divan.find_element(By.CSS_SELECTOR, 'link[itemProp="url"]').get_attribute("href")
 #     except Exception as e:
 #         print(f'произошла ошибка при парсинге данных: {e}')
 #         continue
@@ -40,4 +41,3 @@
 #     writer.writerow(['name', 'price', 'link'])
 #     writer.writerows(parsed_data)
 # print('данные успешно сохранены в файл divans.csv')
-

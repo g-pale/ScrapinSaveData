@@ -36,8 +36,8 @@
 
 # driver.quit()
 
-# with open('divans.csv', 'w', newline='', encoding='utf-8') as file:
+# with open('divans2.csv', 'w', newline='', encoding='utf-8') as file:
 #     writer = csv.writer(file)
 #     writer.writerow(['name', 'price', 'link'])
 #     writer.writerows(parsed_data)
-# print('данные успешно сохранены в файл divans.csv')
+# print('данные успешно сохранены в файл divans2.csv')
